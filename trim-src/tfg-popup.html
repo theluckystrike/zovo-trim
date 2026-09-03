@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Zovo Trim</title>
+  <link rel="stylesheet" href="tfg-chrome.css">
+  <link rel="stylesheet" href="tfg-popup.css">
+</head>
+<body>
+  <main class="tfg-popup-shell">
+    <header class="tfg-popup-head">
+      <div class="tfg-brand-lockup">
+        <img src="tfg-art/trim-32.png" width="32" height="32" alt="">
+        <div>
+          <p class="tfg-kicker">Private video editor</p>
+          <h1>Zovo Trim</h1>
+        </div>
+      </div>
+      <label class="tfg-switch">
+        <span class="tfg-visually-hidden">Enable automatic regions</span>
+        <input id="tfg-enabled" type="checkbox" aria-label="Enable automatic regions">
+        <span aria-hidden="true"></span>
+      </label>
+    </header>
+
+    <section class="tfg-time-hero" aria-labelledby="tfg-current-label">
+      <div class="tfg-live-dot" aria-hidden="true"></div>
+      <p id="tfg-current-label">Current video time</p>
+      <strong id="tfg-current-time" role="status" aria-live="polite">0:00.0</strong>
+      <p id="tfg-page-label" class="tfg-page-label">Looking for a video…</p>
+    </section>
+
+    <section class="tfg-card tfg-capture-card" aria-labelledby="tfg-capture-title">
+      <div class="tfg-section-head">
+        <div>
+          <p class="tfg-kicker">New region</p>
+          <h2 id="tfg-capture-title">Mark the part you control</h2>
+        </div>
+        <span id="tfg-plan-badge" class="tfg-plan-badge">Free</span>
+      </div>
+
+      <div class="tfg-capture-rail" aria-hidden="true">
+        <span class="tfg-capture-node"></span>
+        <span class="tfg-capture-line"></span>
+        <span class="tfg-capture-node tfg-capture-node--end"></span>
+      </div>
+      <div class="tfg-capture-values">
+        <span>Start <strong id="tfg-start-value">Not set</strong></span>
+        <span>End <strong id="tfg-end-value">At playhead</strong></span>
+      </div>
+
+      <fieldset class="tfg-mode-group">
+        <legend>When playback reaches this region</legend>
+        <label><input type="radio" name="tfg-mode" value="skip" checked><span><b>Skip</b><small>Jump to the end</small></span></label>
+        <label><input type="radio" name="tfg-mode" value="mute"><span><b>Mute</b><small>Keep the picture</small></span></label>
+      </fieldset>
+
+      <div class="tfg-action-row">
+        <button id="tfg-start" class="tfg-button tfg-button--primary" type="button">Set start</button>
+        <button id="tfg-end" class="tfg-button" type="button" disabled>Set end &amp; save</button>
+      </div>
+      <button id="tfg-cancel" class="tfg-text-button" type="button" hidden>Cancel start point</button>
+      <p id="tfg-popup-status" class="tfg-status" role="status" aria-live="polite"></p>
+    </section>
+
+    <section class="tfg-region-section" aria-labelledby="tfg-region-title">
+      <div class="tfg-section-head">
+        <div>
+          <p class="tfg-kicker">This URL</p>
+          <h2 id="tfg-region-title">Saved regions</h2>
+        </div>
+        <span id="tfg-region-count" class="tfg-count">0</span>
+      </div>
+      <div id="tfg-region-list" class="tfg-region-list"></div>
+      <div id="tfg-empty" class="tfg-empty">
+        <div class="tfg-mini-art" aria-hidden="true"><span></span><i></i><b></b></div>
+        <strong>Your timeline is clean</strong>
+        <span>Set a start, move the playhead, then save the end.</span>
+      </div>
+    </section>
+
+    <footer class="tfg-popup-foot">
+      <button id="tfg-library" class="tfg-foot-link" type="button">Library &amp; backup</button>
+      <a class="tfg-foot-link tfg-foot-link--upgrade" href="https://zovo.one/pricing?utm_source=zovo-trim&amp;utm_medium=extension&amp;utm_campaign=upgrade&amp;utm_content=popup" target="_blank" rel="noopener">Upgrade / Manage</a>
+    </footer>
+  </main>
+  <script src="tfg-rule-core.js"></script>
+  <script src="tfg-popup-controller.js"></script>
+</body>
+</html>
+

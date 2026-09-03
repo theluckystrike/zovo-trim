@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Welcome to Zovo Trim</title>
+  <link rel="stylesheet" href="tfg-welcome.css">
+</head>
+<body>
+  <div class="tfg-welcome-glow" aria-hidden="true"></div>
+  <main class="tfg-welcome-shell">
+    <header class="tfg-welcome-head">
+      <div class="tfg-welcome-brand"><img src="tfg-art/trim-48.png" width="38" height="38" alt=""><span>Zovo Trim</span></div>
+      <div class="tfg-progress" role="progressbar" aria-label="Onboarding progress" aria-valuemin="1" aria-valuemax="3" aria-valuenow="1"><span class="is-active"></span><span></span><span></span></div>
+      <span id="tfg-step-count" class="tfg-step-count">1 of 3</span>
+    </header>
+
+    <section class="tfg-welcome-step is-active" data-step="0">
+      <div class="tfg-step-copy">
+        <p class="tfg-welcome-kicker">Your cut, every replay</p>
+        <h1>Make any video feel <em>personally edited.</em></h1>
+        <p class="tfg-welcome-lede">Mark the stretches you would rather skip or mute. The next time that URL plays, your choices happen automatically.</p>
+        <div class="tfg-trust-row"><span>Local rules</span><span>No shared database</span><span>Any HTML5 video</span></div>
+      </div>
+      <div class="tfg-timeline-demo" aria-label="Illustration of a personal video timeline">
+        <div class="tfg-demo-screen"><span></span><b></b></div>
+        <div class="tfg-demo-track"><i></i><i></i><i></i></div>
+        <div class="tfg-demo-legend"><span><b></b>Keep</span><span><b></b>Skip</span><span><b></b>Mute</span></div>
+      </div>
+    </section>
+
+    <section class="tfg-welcome-step" data-step="1" hidden>
+      <div class="tfg-step-copy">
+        <p class="tfg-welcome-kicker">Three calm moves</p>
+        <h1>A cut list without the <em>editing suite.</em></h1>
+        <p class="tfg-welcome-lede">Use the toolbar popup while a video is open. Your current playhead becomes the editor.</p>
+      </div>
+      <ol class="tfg-how-list">
+        <li><span>01</span><div><strong>Set start</strong><p>Pause where the unwanted section begins and capture the playhead.</p></div></li>
+        <li><span>02</span><div><strong>Choose the action</strong><p>Skip jumps ahead. Mute keeps the picture and restores sound afterward.</p></div></li>
+        <li><span>03</span><div><strong>Set end and save</strong><p>Move past the section. The rule is ready for every replay of that URL.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="tfg-welcome-step" data-step="2" hidden>
+      <div class="tfg-step-copy">
+        <p class="tfg-welcome-kicker">Stored on this browser</p>
+        <h1>Your viewing choices stay <em>yours.</em></h1>
+        <p class="tfg-welcome-lede">Rules live in local extension storage. Export one JSON backup whenever you want a portable copy.</p>
+      </div>
+      <div class="tfg-finish-grid">
+        <article><span aria-hidden="true">⌁</span><strong>Private playback</strong><p>No community segment lookups, submissions, or viewing telemetry.</p></article>
+        <article><span aria-hidden="true">{ }</span><strong>Portable library</strong><p>JSON export and file-input import keep the data readable and movable.</p></article>
+        <article class="tfg-finish-upgrade"><span aria-hidden="true">∞</span><strong>Need more room?</strong><p>Free includes 10 saved URLs. A verified license makes the library unlimited.</p><a href="https://zovo.one/pricing?utm_source=zovo-trim&amp;utm_medium=extension&amp;utm_campaign=upgrade&amp;utm_content=onboarding" target="_blank" rel="noopener">See both plans at zovo.one</a><small>14-day money-back guarantee</small></article>
+      </div>
+      <div class="tfg-story-links"><span>Built in public by one independent developer.</span><a href="https://zovo.one/why" target="_blank" rel="noopener">Why we build</a><a href="https://github.com/theluckystrike/zovo-trim" target="_blank" rel="noopener">Complete source</a></div>
+    </section>
+
+    <footer class="tfg-welcome-nav">
+      <button id="tfg-back" type="button" disabled>Back</button>
+      <button id="tfg-next" type="button">Show me how</button>
+    </footer>
+  </main>
+  <script src="tfg-welcome-controller.js"></script>
+</body>
+</html>

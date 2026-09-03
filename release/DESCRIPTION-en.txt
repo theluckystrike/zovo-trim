@@ -1,0 +1,12 @@
+Build a private cut list for HTML5 video. Capture a start and end point from the active player, then choose whether playback should skip that region or keep the picture while muting its sound. Rules are tied to the page URL and apply automatically on replay.
+
+Edit exact times in the personal library, delete regions or complete URL sets, export everything as one JSON file, and restore a backup through a local file picker. Embedded players are supported.
+
+Video URLs, titles, times, and actions stay in local extension storage. There is no shared segment database, segment submission, voting, or playback telemetry. Optional license activation sends only the entered key and product identifier to the verifier.
+
+Free use includes 10 saved video URLs. A verified license removes that saved-URL limit. Core editing and JSON export remain available without activation.
+
+Complete GPL-3.0-or-later source: https://github.com/theluckystrike/zovo-trim
+Privacy: https://zovo.one/privacy-policy
+Support: https://zovo.one/support
+

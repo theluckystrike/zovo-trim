@@ -1,0 +1,9 @@
+{
+  "extensionName": {
+    "message": "Zovo Trim"
+  },
+  "extensionDescription": {
+    "message": "Mark personal skip or mute regions on HTML5 videos. Rules stay local and replay automatically."
+  }
+}
+

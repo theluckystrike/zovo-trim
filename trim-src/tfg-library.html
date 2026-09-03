@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Zovo Trim · Library</title>
+  <link rel="stylesheet" href="tfg-chrome.css">
+  <link rel="stylesheet" href="tfg-library.css">
+</head>
+<body>
+  <div class="tfg-library-shell">
+    <header class="tfg-library-head">
+      <a class="tfg-home-link" href="https://zovo.one/" target="_blank" rel="noopener">
+        <img src="tfg-art/trim-48.png" width="40" height="40" alt="">
+        <span><b>Zovo Trim</b><small>Personal region library</small></span>
+      </a>
+      <span id="tfg-library-plan" class="tfg-plan-chip">Free · 10 URLs</span>
+    </header>
+
+    <main class="tfg-library-grid">
+      <div class="tfg-library-main">
+        <section class="tfg-library-hero">
+          <div>
+            <p class="tfg-kicker">Your private cut list</p>
+            <h1>Edit once. Replay your version.</h1>
+            <p>Every region is tied to one URL and kept in browser storage.</p>
+          </div>
+          <div class="tfg-metric" role="status" aria-live="polite">
+            <strong id="tfg-url-count">0</strong>
+            <span>saved URLs</span>
+          </div>
+        </section>
+
+        <section class="tfg-card tfg-backup-card" aria-labelledby="tfg-backup-title">
+          <div>
+            <p class="tfg-kicker">Portable backup</p>
+            <h2 id="tfg-backup-title">One JSON file, under your control</h2>
+            <p>Export everything or import another backup. Nothing is uploaded.</p>
+          </div>
+          <div class="tfg-backup-actions">
+            <button id="tfg-export" class="tfg-button tfg-button--primary" type="button">Export JSON</button>
+            <label class="tfg-button tfg-file-button">Import JSON<input id="tfg-import" type="file" accept="application/json,.json"></label>
+            <label class="tfg-import-mode">Import mode
+              <select id="tfg-import-mode">
+                <option value="merge">Merge safely</option>
+                <option value="replace">Replace library</option>
+              </select>
+            </label>
+          </div>
+          <p id="tfg-library-status" class="tfg-status" role="status" aria-live="polite"></p>
+        </section>
+
+        <section aria-labelledby="tfg-rules-title">
+          <div class="tfg-library-section-head">
+            <div>
+              <p class="tfg-kicker">Saved locally</p>
+              <h2 id="tfg-rules-title">Video rules</h2>
+            </div>
+            <label class="tfg-filter">Filter URLs<input id="tfg-filter" type="search" placeholder="Search title or URL"></label>
+          </div>
+          <div id="tfg-library-list" class="tfg-library-list"></div>
+          <div id="tfg-library-empty" class="tfg-library-empty">
+            <div class="tfg-empty-art" aria-hidden="true"><i></i><span></span><b></b></div>
+            <h3>No personal regions yet</h3>
+            <p>Open any page with an HTML5 video, then use the toolbar popup to mark your first region.</p>
+          </div>
+        </section>
+      </div>
+
+      <aside class="tfg-library-aside">
+        <section class="tfg-card tfg-license-card" aria-labelledby="tfg-license-title">
+          <p class="tfg-kicker">Unlimited library</p>
+          <h2 id="tfg-license-title">Keep every cut list</h2>
+          <p>Free includes 10 saved video URLs. A verified license removes that limit.</p>
+          <ul>
+            <li>Save beyond the 10-URL free allowance</li>
+            <li>Import backups with more than 10 URL sets</li>
+            <li>Keep all current free editing and export controls</li>
+          </ul>
+          <a class="tfg-button tfg-upgrade-link" href="https://zovo.one/pricing?utm_source=zovo-trim&amp;utm_medium=extension&amp;utm_campaign=upgrade&amp;utm_content=library" target="_blank" rel="noopener">See both plans at zovo.one</a>
+          <p class="tfg-guarantee">14-day money-back guarantee</p>
+          <hr>
+          <label for="tfg-license-key">License key</label>
+          <input id="tfg-license-key" class="tfg-key-input" type="text" inputmode="text" autocomplete="off" spellcheck="false" maxlength="24" placeholder="ZOVO-XXXX-XXXX-XXXX-XXXX">
+          <button id="tfg-activate" class="tfg-button" type="button">Activate license</button>
+          <p id="tfg-license-status" class="tfg-status" role="status" aria-live="polite"></p>
+        </section>
+
+        <section class="tfg-card tfg-privacy-card">
+          <p class="tfg-kicker">Private by default</p>
+          <h2>No shared segment database</h2>
+          <p>Video URLs and regions stay in local extension storage. The only network call is optional license verification.</p>
+          <nav>
+            <a href="https://zovo.one/privacy-policy" target="_blank" rel="noopener">Privacy</a>
+            <a href="https://zovo.one/support" target="_blank" rel="noopener">Support</a>
+            <a href="https://github.com/theluckystrike/zovo-trim" target="_blank" rel="noopener">Complete source</a>
+          </nav>
+        </section>
+      </aside>
+    </main>
+  </div>
+  <script src="tfg-rule-core.js"></script>
+  <script src="tfg-library-controller.js"></script>
+</body>
+</html>

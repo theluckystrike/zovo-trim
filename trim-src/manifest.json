@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_extensionName__",
+  "short_name": "Trim",
+  "version": "1.0.0",
+  "description": "__MSG_extensionDescription__",
+  "default_locale": "en",
+  "homepage_url": "https://zovo.one/",
+  "icons": {
+    "16": "tfg-art/trim-16.png",
+    "32": "tfg-art/trim-32.png",
+    "48": "tfg-art/trim-48.png",
+    "128": "tfg-art/trim-128.png"
+  },
+  "action": {
+    "default_title": "Zovo Trim",
+    "default_popup": "tfg-popup.html",
+    "default_icon": {
+      "16": "tfg-art/trim-16.png",
+      "32": "tfg-art/trim-32.png",
+      "48": "tfg-art/trim-48.png",
+      "128": "tfg-art/trim-128.png"
+    }
+  },
+  "background": {
+    "service_worker": "tfg-license-worker.js"
+  },
+  "options_ui": {
+    "page": "tfg-library.html",
+    "open_in_tab": true
+  },
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://zgubxqomnbmxgbdhvwja.supabase.co/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["tfg-rule-core.js", "tfg-playback-engine.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ]
+}

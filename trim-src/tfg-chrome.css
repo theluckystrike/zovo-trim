@@ -1,0 +1,130 @@
+/* Copyright (C) 2026 Zovo.one contributors · GPL-3.0-or-later */
+:root {
+    color-scheme: light dark;
+    --tfg-ink: #17211d;
+    --tfg-muted: #5c6963;
+    --tfg-ground: #f3f6f3;
+    --tfg-paper: #ffffff;
+    --tfg-line: #dce4df;
+    --tfg-accent: #087f6a;
+    --tfg-accent-strong: #056553;
+    --tfg-accent-soft: #dff3ed;
+    --tfg-coral: #b94834;
+    --tfg-coral-soft: #fae8e3;
+    --tfg-gold: #8d5700;
+    --tfg-gold-soft: #fff2ce;
+    --tfg-shadow: 0 18px 42px -28px rgba(18, 49, 39, .42);
+    --tfg-radius: 14px;
+    --tfg-focus: 0 0 0 3px rgba(8, 127, 106, .24);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --tfg-ink: #edf5f1;
+        --tfg-muted: #9bacA4;
+        --tfg-ground: #0c1512;
+        --tfg-paper: #121f1a;
+        --tfg-line: #2b3d35;
+        --tfg-accent: #58d3b7;
+        --tfg-accent-strong: #7be2ca;
+        --tfg-accent-soft: #173b32;
+        --tfg-coral: #ff9a82;
+        --tfg-coral-soft: #43251f;
+        --tfg-gold: #f4c46a;
+        --tfg-gold-soft: #3d321c;
+        --tfg-shadow: 0 18px 42px -28px rgba(0, 0, 0, .9);
+        --tfg-focus: 0 0 0 3px rgba(88, 211, 183, .26);
+    }
+}
+
+[data-theme="light"] {
+    color-scheme: light;
+    --tfg-ink: #17211d;
+    --tfg-muted: #5c6963;
+    --tfg-ground: #f3f6f3;
+    --tfg-paper: #ffffff;
+    --tfg-line: #dce4df;
+    --tfg-accent: #087f6a;
+    --tfg-accent-strong: #056553;
+    --tfg-accent-soft: #dff3ed;
+    --tfg-coral: #b94834;
+    --tfg-coral-soft: #fae8e3;
+    --tfg-gold: #8d5700;
+    --tfg-gold-soft: #fff2ce;
+}
+
+[data-theme="dark"] {
+    color-scheme: dark;
+    --tfg-ink: #edf5f1;
+    --tfg-muted: #9baca4;
+    --tfg-ground: #0c1512;
+    --tfg-paper: #121f1a;
+    --tfg-line: #2b3d35;
+    --tfg-accent: #58d3b7;
+    --tfg-accent-strong: #7be2ca;
+    --tfg-accent-soft: #173b32;
+    --tfg-coral: #ff9a82;
+    --tfg-coral-soft: #43251f;
+    --tfg-gold: #f4c46a;
+    --tfg-gold-soft: #3d321c;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+
+body {
+    margin: 0;
+    color: var(--tfg-ink);
+    background: var(--tfg-ground);
+    font: 14px/1.5 Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+button, input, select { font: inherit; }
+
+button, a, input, select { outline: none; }
+
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible {
+    box-shadow: var(--tfg-focus);
+}
+
+.tfg-button {
+    min-height: 44px;
+    border: 1px solid var(--tfg-line);
+    border-radius: 10px;
+    padding: 10px 16px;
+    color: var(--tfg-ink);
+    background: var(--tfg-paper);
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+}
+
+.tfg-button:hover:not(:disabled) { border-color: var(--tfg-accent); transform: translateY(-1px); }
+.tfg-button:active:not(:disabled) { transform: translateY(0); }
+.tfg-button:disabled { cursor: not-allowed; opacity: .5; }
+.tfg-button--primary { border-color: var(--tfg-accent); color: #fff; background: var(--tfg-accent); }
+.tfg-button--primary:hover:not(:disabled) { background: var(--tfg-accent-strong); }
+
+.tfg-kicker {
+    margin: 0;
+    color: var(--tfg-accent);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+}
+
+.tfg-card {
+    border: 1px solid var(--tfg-line);
+    border-radius: var(--tfg-radius);
+    padding: 16px;
+    background: var(--tfg-paper);
+}
+
+.tfg-status { min-height: 18px; margin: 0; color: var(--tfg-muted); font-size: 12px; }
+.tfg-status[data-kind="error"] { color: var(--tfg-coral); }
+.tfg-status[data-kind="success"] { color: var(--tfg-accent); }
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+}

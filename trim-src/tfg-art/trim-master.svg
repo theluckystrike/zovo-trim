@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Trim timeline mark</title>
+  <desc id="desc">A green video tile with a coral cut in a personal timeline</desc>
+  <defs>
+    <linearGradient id="ground" x1="62" y1="36" x2="454" y2="478" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0E9B82"/>
+      <stop offset="1" stop-color="#064D42"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="104" y1="92" x2="406" y2="394" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect x="24" y="24" width="464" height="464" rx="112" fill="url(#ground)"/>
+  <path d="M92 176c0-32 26-58 58-58h212c32 0 58 26 58 58v132c0 32-26 58-58 58H150c-32 0-58-26-58-58V176Z" fill="#062E28" fill-opacity=".52" stroke="#D8FFF5" stroke-opacity=".38" stroke-width="8"/>
+  <path d="m235 191 91 52-91 52V191Z" fill="#F2FFF9"/>
+  <path d="M108 383h296" stroke="#D8FFF5" stroke-opacity=".45" stroke-width="18" stroke-linecap="round"/>
+  <path d="M164 383h100" stroke="#59D9BC" stroke-width="18" stroke-linecap="round"/>
+  <path d="M295 383h53" stroke="#FF8F75" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="164" cy="383" r="25" fill="#F2FFF9" stroke="#59D9BC" stroke-width="12"/>
+  <circle cx="348" cy="383" r="25" fill="#F2FFF9" stroke="#FF8F75" stroke-width="12"/>
+  <path d="m245 349 48 68M293 349l-48 68" stroke="#F3C365" stroke-width="14" stroke-linecap="round"/>
+  <path d="M73 82c71-43 201-43 287-10 52 20 88 57 107 98" fill="none" stroke="url(#shine)" stroke-width="28" stroke-linecap="round"/>
+</svg>

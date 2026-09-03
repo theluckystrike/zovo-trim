@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 560">
+  <defs><linearGradient id="bg" x1="70" y1="30" x2="1320" y2="540"><stop stop-color="#0D8E75"/><stop offset="1" stop-color="#062F29"/></linearGradient><linearGradient id="track" x1="0" x2="1"><stop stop-color="#59D9BC"/><stop offset=".62" stop-color="#59D9BC"/><stop offset=".62" stop-color="#FF8F75"/><stop offset=".78" stop-color="#FF8F75"/><stop offset=".78" stop-color="#F3C365"/></linearGradient></defs>
+  <rect width="1400" height="560" fill="url(#bg)"/>
+  <circle cx="1270" cy="-10" r="310" fill="#FFFFFF" opacity=".045"/><circle cx="1080" cy="620" r="320" fill="#59D9BC" opacity=".055"/>
+  <g transform="translate(90 70)"><rect width="62" height="62" rx="17" fill="#EFFFF9" opacity=".14"/><path d="M24 18v27l24-13.5L24 18Z" fill="#EFFFF9"/></g>
+  <text x="176" y="111" fill="#DFFFF6" font-family="Arial,sans-serif" font-size="22" font-weight="700">Zovo Trim</text>
+  <text x="90" y="238" fill="#FFFFFF" font-family="Arial,sans-serif" font-size="68" font-weight="800">Your personal cut list</text>
+  <text x="90" y="312" fill="#FFFFFF" font-family="Arial,sans-serif" font-size="68" font-weight="800">for any HTML5 video.</text>
+  <text x="93" y="367" fill="#C7E5DC" font-family="Arial,sans-serif" font-size="23">Set start. Set end. Choose skip or mute. Replay automatically.</text>
+  <rect x="90" y="422" width="1120" height="22" rx="11" fill="#DFFFF6" opacity=".16"/><rect x="90" y="422" width="1120" height="22" rx="11" fill="url(#track)"/>
+  <circle cx="90" cy="433" r="19" fill="#073B33" stroke="#59D9BC" stroke-width="8"/><circle cx="1210" cy="433" r="19" fill="#073B33" stroke="#F3C365" stroke-width="8"/>
+  <path d="m856 396 46 73M902 396l-46 73" stroke="#F3C365" stroke-width="12" stroke-linecap="round"/>
+  <g transform="translate(1238 324)"><rect width="88" height="88" rx="24" fill="#EFFFF9" opacity=".12"/><path d="M34 26v38l34-19-34-19Z" fill="#EFFFF9"/></g>
+</svg>
