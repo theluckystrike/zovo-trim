@@ -7,10 +7,13 @@ import { mkdtemp, readFile, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { chromium } from "playwright";
+import { createRequire } from "node:module";
 import { fileURLToPath } from "node:url";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
-const axeSource = await readFile("/Users/mike/Desktop/zovo-ext/engine/7-live-qa/node_modules/axe-core/axe.min.js", "utf8");
+const require = createRequire(import.meta.url);
+const extensionDir = path.resolve(process.env.EXTENSION_DIST || path.join(root, "dist"));
+const axeSource = await readFile(require.resolve("axe-core/axe.min.js"), "utf8");
 const chromeCandidates = [
     process.env.QA_CHROME_PATH,
     "/tmp/zovo-trim-chrome/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
@@ -74,8 +77,8 @@ try {
         ignoreDefaultArgs: ["--disable-extensions"],
         acceptDownloads: true,
         args: [
-            `--disable-extensions-except=${path.join(root, "dist")}`,
-            `--load-extension=${path.join(root, "dist")}`,
+            `--disable-extensions-except=${extensionDir}`,
+            `--load-extension=${extensionDir}`,
             "--autoplay-policy=no-user-gesture-required",
             "--no-first-run",
             "--disable-default-apps",

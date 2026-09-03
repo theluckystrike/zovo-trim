@@ -23,6 +23,8 @@ npx playwright install chromium
 node test/zovo-trim/runtime-chrome.mjs
 ```
 
+Set `EXTENSION_DIST=/path/to/unpacked` to exercise an already packaged copy.
+
 The Chrome runtime test covers MV3 loading, global content-script access, skip seeks, mute restoration, popup-style start/end capture, JSON Blob export, file-input import, onboarding navigation, and serious/critical accessibility findings.
 
 ## Upstream and license
